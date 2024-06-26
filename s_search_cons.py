@@ -42,7 +42,7 @@ negative_description = st.text_input('Negative description')
 if ss_input and product_description and negative_description:
     urls, labels = v_search(product_description, negative_description, ss_input)
 
-    st.image(ss_input)
+    st.image(ss_input, width=400)
     st.subheader('Results')
 
     url_chunks = [urls[i:i + num_columns] for i in range(0, len(urls), num_columns)]

@@ -43,6 +43,9 @@ product_description = st.text_input('Product description')
 if ss_input:
     urls, labels = v_search(ss_input, product_description)
 
+    st.image(ss_input, width=400)
+    st.subheader('Results')
+
     url_chunks = [urls[i:i + num_columns] for i in range(0, len(urls), num_columns)]
     url_labels = [labels[i:i + num_columns] for i in range(0, len(labels), num_columns)]
 
